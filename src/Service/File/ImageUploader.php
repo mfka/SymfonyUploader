@@ -49,10 +49,10 @@ class ImageUploader
         $path = sprintf('%s/../public%s', $this->rootDir, $this->uploadDir);
         try {
             $file->move($path, $fileName);
-            $imagine = new \Imagine\Imagick\Imagine();
-            $resizedImage = $imagine->open(sprintf('%s/%s', $path, $fileName));
-            $resizedImage->resize(new Box($image->getWidth(), $image->getHeight()));
-            $resizedImage->save(sprintf('%s/%s', $path, $fileName));
+//            $imagine = new \Imagine\Imagick\Imagine();
+//            $resizedImage = $imagine->open(sprintf('%s/%s', $path, $fileName));
+//            $resizedImage->resize(new Box($image->getWidth(), $image->getHeight()));
+//            $resizedImage->save(sprintf('%s/%s', $path, $fileName));
             $image->setPath(sprintf('%s/%s', $this->uploadDir, $fileName));
             $this->logger->info(sprintf('File Uploaded! Size: %d, Name: %s', $uploadedFileSize, $fileName));
         } catch (UploadException $e) {
