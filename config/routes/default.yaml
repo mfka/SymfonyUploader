@@ -1,0 +1,4 @@
+homepage:
+    path: /
+    controller: App\Controller\DefaultController::homepage
+    methods: [POST,GET]
